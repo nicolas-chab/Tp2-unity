@@ -1,27 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class MayoriaDeEdad : MonoBehaviour
+using UnityEngine.UI;
+public class Mayoriadeedad : MonoBehaviour
 {
-     public int edadUsuario;
-
+    public int edadUsuario;
+    public Text miTexto; 
     void Start()
-       
     {
-       
-
-        if (edadUsuario >= 18) 
+        if (edadUsuario >= 18)
         {
+            miTexto.text = "es mayor de edad";
             Debug.Log("es mayor de edad");
         }
-        else 
+        else
         {
-            Debug.Log("no es mayor de edad");
+            miTexto.text = " es menor de edad";
+            Debug.Log(" es menor de edad");
         }
+          
+            
     }
 
-   
+    
     void Update()
     {
         
